@@ -1,0 +1,4 @@
+isolate_id,isolate_name,subtype,lineage,host,location,collection_date
+ISO-001,Synthetic Alpha,H1N1,example,human,North Carolina,2025-01-15
+ISO-002,Synthetic Beta,H3N2,example,avian,Virginia,2025-02-20
+

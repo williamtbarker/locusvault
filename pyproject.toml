@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "locusvault"
+version = "0.1.0"
+description = "A transactional SQLite warehouse for sequence metadata and FASTA records"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Will Barker" }]
+keywords = ["bioinformatics", "sqlite", "fasta", "data-engineering", "provenance"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Database :: Database Engines/Servers",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.11",
+  "ruff>=0.6",
+  "setuptools>=68",
+  "wheel>=0.43",
+]
+
+[project.scripts]
+locusvault = "locusvault.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/williamtbarker/locusvault"
+Repository = "https://github.com/williamtbarker/locusvault"
+Issues = "https://github.com/williamtbarker/locusvault/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+locusvault = ["py.typed"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "N", "UP"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src"]
