@@ -3,6 +3,8 @@ message: "If you use this software, please cite it using the metadata below."
 title: "LocusVault"
 version: 0.1.0
 date-released: 2026-09-02
-author: "Will Barker"
+authors:
+  - family-names: "Barker"
+    given-names: "Will"
 license: MIT
 repository-code: "https://github.com/williamtbarker/locusvault"
