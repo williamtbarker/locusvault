@@ -4,7 +4,6 @@ title: "LocusVault"
 version: 0.1.0
 date-released: 2026-09-02
 authors:
-  - family-names: "Barker"
-    given-names: "Will"
+  - "Will Barker"
 license: MIT
 repository-code: "https://github.com/williamtbarker/locusvault"
